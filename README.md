@@ -1,4 +1,4 @@
-# Pico-Macro-Keyboard
+# Raspberry Pi Pico Macro Keyboard
 A Macro Keyboard using Raspberry Pi Pico & CircuitPython
 
 ![Pico_Macro_Circuit](https://user-images.githubusercontent.com/62252266/114724051-d0c22780-9d58-11eb-9b87-35536f5e4c64.png)
