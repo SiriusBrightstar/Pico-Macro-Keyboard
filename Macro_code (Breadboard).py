@@ -1,9 +1,18 @@
+# Rename this file as code.py and save to the Raspberry Pi Pico
+# This code is configured to send GTA Vice City cheat codes on press of a button
+
 import time
 import board
 import digitalio
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
+
+A = 'aspirine'
+B = 'preciousprotection'
+C = 'leavemealone'
+D = 'gettherefast'
+E = 'nuttertools'
 
 kbd = Keyboard(usb_hid.devices)             #Initialize Pico as a HID Keyboard Device
 layout = KeyboardLayoutUS(kbd)
@@ -34,23 +43,23 @@ BT5.pull = digitalio.Pull.DOWN
 
 while True:                                 #Infinite Loop
     if BT1.value == True:
-        layout.write('aspirine')            #Add text to be triggered by GP15
+        layout.write(A)                     #Add text to be triggered by GP15
         LED.value = True                    #LED turns on for 0.1s when Button is pressed
-        time.sleep(0.1)
+        time.sleep(0.3)
     elif BT2.value == True:
-        layout.write('preciousprotection')  #Add text to be triggered by GP14
+        layout.write(B)                     #Add text to be triggered by GP14
         LED.value = True
-        time.sleep(0.1)
+        time.sleep(0.3)
     elif BT3.value == True:
-        layout.write('leavemealone')        #Add text to be triggered by GP13
+        layout.write(C)                     #Add text to be triggered by GP13
         LED.value = True
-        time.sleep(0.1)
+        time.sleep(0.3)
     elif BT4.value == True:
-        layout.write('panzer')              #Add text to be triggered by GP12
+        layout.write(D)                     #Add text to be triggered by GP12
         LED.value = True
-        time.sleep(0.1)
+        time.sleep(0.3)
     elif BT5.value == True:
-        layout.write('gettherefast')        #Add text to be triggered by GP11
+        layout.write(E)                     #Add text to be triggered by GP11
         LED.value = True
-        time.sleep(0.1)
+        time.sleep(0.3)
     LED.value = False
