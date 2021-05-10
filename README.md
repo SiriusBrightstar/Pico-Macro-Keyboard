@@ -10,7 +10,7 @@ Rename Macro_code.py to code.py so that the Program runs automatically when you 
 This [Adafruit HID library](https://github.com/adafruit/Adafruit_CircuitPython_HID) was used.
 
 ## 20 Key Macro Keyboard PCB Design
-This PCB used 12mm * 12mm Push Buttons
+This PCB uses 12mm * 12mm Push Buttons
 
 ### Front:
 
