@@ -9,11 +9,13 @@ from adafruit_hid.keyboard import Keyboard
 #from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
-#A = Add text to be triggered by GP15
-#B = Add text to be triggered by GP14
-#C = Add text to be triggered by GP13
-#D = Add text to be triggered by GP12
-#E = Add text to be triggered by GP11
+'''
+A = Add text to be triggered by GP15
+B = Add text to be triggered by GP14
+C = Add text to be triggered by GP13
+D = Add text to be triggered by GP12
+E = Add text to be triggered by GP11
+'''
 
 #GTA Vice City
 A = 'aspirine'
