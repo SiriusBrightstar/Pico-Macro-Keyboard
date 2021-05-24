@@ -6,13 +6,24 @@ import board
 import digitalio
 import usb_hid
 from adafruit_hid.keyboard import Keyboard
+#from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
-A = 'aspirine'                              #Add text to be triggered by GP15
-B = 'preciousprotection'                    #Add text to be triggered by GP14
-C = 'leavemealone'                          #Add text to be triggered by GP13
-D = 'gettherefast'                          #Add text to be triggered by GP12
-E = 'nuttertools'                           #Add text to be triggered by GP11
+
+#GTA Vice City
+A = 'aspirine'
+B = 'preciousprotection'
+C = 'leavemealone'
+D = 'gettherefast'
+E = 'nuttertools'
+'''
+#GTA San Andreas (Not Working)
+A = 'hesoyam'
+B = 'baguvix'
+C = 'FULLCLIP'
+D = 'TURNDOWNTHEHEAT'
+E = 'VROCKPOKEY'
+'''
 
 kbd = Keyboard(usb_hid.devices)             #Initialize Pico as a HID Keyboard Device
 layout = KeyboardLayoutUS(kbd)
@@ -43,23 +54,23 @@ BT5.pull = digitalio.Pull.DOWN
 
 while True:                                 #Infinite Loop
     if BT1.value == True:
-        layout.write(A)                     
-        LED.value = True                    #LED turns on for 0.3s when Button is pressed
+        layout.write(A)                     #Add text to be triggered by GP15
+        LED.value = True                    #LED turns on for 300ms when Button is pressed
         time.sleep(0.3)
     elif BT2.value == True:
-        layout.write(B)                     
+        layout.write(B)                     #Add text to be triggered by GP14
         LED.value = True
         time.sleep(0.3)
     elif BT3.value == True:
-        layout.write(C)                     
+        layout.write(C)                     #Add text to be triggered by GP13
         LED.value = True
         time.sleep(0.3)
     elif BT4.value == True:
-        layout.write(D)                     
+        layout.write(D)                     #Add text to be triggered by GP12
         LED.value = True
         time.sleep(0.3)
     elif BT5.value == True:
-        layout.write(E)                     
+        layout.write(E)                     #Add text to be triggered by GP11
         LED.value = True
         time.sleep(0.3)
     LED.value = False
